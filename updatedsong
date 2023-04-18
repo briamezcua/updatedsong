@@ -1,0 +1,97 @@
+bri = "C:/Users/briana_amezcua/Downloads/i2.wav"
+bela = "C:/Users/briana_amezcua/Downloads/2.wav"
+intro = "C:/Users/briana_amezcua/Downloads/one.wav"
+trans = "C:/Users/briana_amezcua/Downloads/two.wav"
+trans2 = "C:/Users/briana_amezcua/Downloads/three.wav"
+
+sample intro
+
+sleep 9
+
+n = -1
+a = 7
+
+sample bri
+
+use_synth :piano
+
+sleep 12.4
+
+live_loop:one do
+  sample :drum_cymbal_closed,amp:  0.3
+  sleep 0.444
+end
+
+sleep 4.496
+
+live_loop:two do
+  sample :drum_bass_soft,amp: 0.6
+  sleep 1.78
+end
+
+3.times do
+  sleep n
+  n = 0
+  use_bpm 133.5
+  #measure 1
+  sleep 1.5
+  play :e4
+  sleep 0.5
+  play :e4
+  sleep 1
+  play :e4
+  sleep 0.5
+  play :gs4
+  sleep 0.5
+  #measure 2
+  play :gs4
+  sleep 1
+  play :fs4
+  sleep 0.5
+  play :e4
+  sleep 0.5
+  play :e4
+  sleep 1
+  play :cs4
+  sleep 0.5
+  play :es4
+  sleep 0.5
+  #measure 3
+  play :es4
+  sleep 1
+  play :fs4
+  sleep 1
+  play :fs4
+  sleep 2
+  #measure 4
+  sleep 4
+  #measure 5
+  sleep 1
+  play :e4
+  sleep 1
+  play :e4
+  sleep 1
+  play :e4
+  sleep 1
+  #measure 6
+  play :gs4
+  sleep 1
+  play :b4
+  sleep 1
+  play :b4
+  sleep 1
+  play :b4
+  sleep 0.5
+  play :cs5
+  sleep 8.1
+end
+
+n = n + 3.31
+
+sleep 2
+
+sample trans2
+
+sleep 17
+
+sample trans
